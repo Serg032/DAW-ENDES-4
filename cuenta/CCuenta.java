@@ -17,7 +17,45 @@ public class CCuenta {
         nombre =nom;
         cuenta=cue;
         saldo=sal;
+        tipoInterés=tipo;
     }
+
+    public String  getNombre(){
+        return this.nombre;
+    }
+
+    public String getCuenta(){
+        return this.cuenta;
+    }
+
+    public double getSaldo(){
+        return this.saldo;
+    }
+
+    public double getTipoInterés(){
+        return this.tipoInterés;
+    }
+
+    public void setTipoInterés(double tipoInterés){
+        this.tipoInterés=tipoInterés;
+    }
+
+    public void setNombre(String nom){
+        this.nombre=nom;
+    }
+
+    public void setCuenta(String cue){
+        this.cuenta=cue;
+    }
+
+    public void setSaldo(double saldo){
+        this.saldo=saldo;
+    }
+
+    public void setSaldo(double sal){
+        this.saldo=sal;
+    }
+
 
     public double estado()
     {
@@ -40,7 +78,7 @@ public class CCuenta {
         saldo = saldo - cantidad;
     }
 
-    public void operativa_cuenta(){
+    public void operativa_cuenta(float quantity){
         CCuenta cuenta1;
         double saldoActual;
 
@@ -49,13 +87,13 @@ public class CCuenta {
         System.out.println("El saldo actual es"+ saldoActual );
 
         try {
-            cuenta1.retirar(2300);
+            cuenta1.retirar(quantity);
         } catch (Exception e) {
             System.out.print("Fallo al retirar");
         }
         try {
             System.out.println("Ingreso en cuenta");
-            cuenta1.ingresar(695);
+            cuenta1.ingresar(quantity);
         } catch (Exception e) {
             System.out.print("Fallo al ingresar");
         }    }
