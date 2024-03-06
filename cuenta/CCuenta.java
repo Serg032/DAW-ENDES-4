@@ -52,10 +52,6 @@ public class CCuenta {
         this.saldo=saldo;
     }
 
-    public void setSaldo(double sal){
-        this.saldo=sal;
-    }
-
 
     public double estado()
     {

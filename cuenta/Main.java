@@ -4,6 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
         CCuenta cuenta = new CCuenta();
-        cuenta.operativa_cuenta();
+        cuenta.operativa_cuenta(1111.0f);
     }
 }
